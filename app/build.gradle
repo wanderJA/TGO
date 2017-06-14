@@ -3,6 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
+    aaptOptions.cruncherEnabled = false
+
+    aaptOptions.useNewCruncher = false
     defaultConfig {
         applicationId "com.wander.tgo"
         minSdkVersion 15
@@ -11,10 +14,6 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
-
-        aaptOptions.cruncherEnabled = false
-
-        aaptOptions.useNewCruncher = false
     }
     buildTypes {
         release {
